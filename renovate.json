@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "type": "jsonata",
+      "fileMatch": ["renovate-me.json"],
+      "matchQueries": ["production.{ \"depName\": package, \"currentValue\": version }"],
+      "datasourceTemplate": "nuget"
+    }
+  ]
+}
